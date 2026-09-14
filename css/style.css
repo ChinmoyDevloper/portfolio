@@ -1,0 +1,328 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+
+.navbar {
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(14px);
+}
+
+.navbar-profile-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0d6efd;
+}
+
+
+/* Desktop nav */
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: #222;
+    margin-left: 14px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0d6efd;
+}
+
+
+/* Mobile Toggle */
+
+.custom-toggler {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #f5f5f7;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    box-shadow: none !important;
+}
+
+.custom-toggler span {
+    width: 20px;
+    height: 2px;
+
+    background: #111;
+
+    border-radius: 10px;
+}
+
+
+/* Offcanvas */
+
+.mobile-menu {
+    width: 280px !important;
+    border-left: none;
+}
+
+.mobile-menu .offcanvas-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-img {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* Mobile Links */
+
+.mobile-nav {
+    gap: 5px;
+}
+
+.mobile-nav .nav-link {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    border-radius: 12px;
+
+    color: #222;
+
+    font-weight: 600;
+
+    margin: 0;
+}
+
+.mobile-nav .nav-link i {
+    width: 28px;
+
+    font-size: 19px;
+
+    color: #0d6efd;
+}
+
+.mobile-nav .nav-link:hover {
+    background: #f3f6ff;
+    color: #0d6efd;
+}
+
+
+/* Mobile */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        padding: 8px 0;
+    }
+
+    .navbar-profile-img {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+
+
+/* =====================
+   Custom Mobile Toggle
+===================== */
+
+.custom-toggler {
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #f1f5f9;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    box-shadow: none !important;
+}
+
+.custom-toggler span {
+    width: 23px;
+    height: 2px;
+
+    background: #111;
+
+    border-radius: 5px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Toggle Animation */
+
+.custom-toggler[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.custom-toggler[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.custom-toggler[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =====================
+   Mobile Navbar
+===================== */
+
+@media (max-width: 991px) {
+
+    /* Smaller mobile menu box */
+    .navbar-collapse {
+        margin-top: 8px;
+        padding: 8px 10px;
+
+        background: #fff;
+
+        border-radius: 12px;
+
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+
+    /* Reduce space between menu items */
+    .navbar-nav .nav-link {
+        margin: 0;
+
+        padding: 8px 12px;
+
+        font-size: 15px;
+
+        border-radius: 8px;
+    }
+
+
+    .navbar-nav .nav-link:hover {
+        background: #f5f7ff;
+    }
+
+
+    /* Remove underline animation on mobile */
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+
+
+    /* Smaller toggle button */
+    .custom-toggler {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 10px;
+    }
+
+
+    .custom-toggler span {
+        width: 21px;
+    }
+
+
+    /* Smaller profile image */
+    .navbar-profile-img {
+        width: 42px;
+        height: 42px;
+    }
+
+}
+/* Typing Name */
+
+#typing-name {
+    display: inline-block;
+    min-height: 1.2em;
+}
+
+#typing-name::after {
+    content: "|";
+    margin-left: 3px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Mobile Responsive Typing */
+
+@media (max-width: 768px) {
+
+    #home {
+        text-align: center;
+        padding-top: 90px;
+    }
+
+    #home h1 {
+        font-size: 42px;
+        line-height: 1.15;
+        min-height: 100px;
+    }
+
+    #typing-name {
+        display: inline-block;
+        word-break: break-word;
+    }
+
+    #home h2 {
+        font-size: 21px;
+    }
+
+    #home .lead {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* Very Small Mobile */
+
+@media (max-width: 480px) {
+
+    #home h1 {
+        font-size: 34px;
+        min-height: 85px;
+    }
+
+    #home h2 {
+        font-size: 18px;
+    }
+
+}
