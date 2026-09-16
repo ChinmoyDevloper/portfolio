@@ -1,63 +1,122 @@
+/* ==================================================
+   GLOBAL
+================================================== */
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+
+    color: #212529;
+
+    overflow-x: hidden;
 }
 
-/* Navbar */
+section {
+    scroll-margin-top: 60px;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
 
 .navbar {
-    padding: 10px 0;
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(14px);
+    height: 62px;
+
+    padding: 0;
+
+    background: rgba(255, 255, 255, 0.96) !important;
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
 }
 
+.navbar .container {
+    height: 100%;
+}
+
+
+/* Profile Logo */
+
 .navbar-profile-img {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
     object-fit: cover;
+
+    border-radius: 50%;
+
     border: 2px solid #0d6efd;
 }
 
 
-/* Desktop nav */
+/* Desktop Links */
 
 .navbar-nav .nav-link {
-    font-weight: 600;
     color: #222;
-    margin-left: 14px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    padding: 8px 11px !important;
+
+    margin-left: 4px;
+
+    border-radius: 8px;
+
+    transition: 0.25s ease;
 }
 
 .navbar-nav .nav-link:hover {
     color: #0d6efd;
+
+    background: #f2f6ff;
 }
 
 
-/* Mobile Toggle */
+/* ==================================================
+   MOBILE NAV BUTTON
+================================================== */
 
 .custom-toggler {
-    width: 42px;
-    height: 42px;
-
-    border: none;
-    border-radius: 12px;
-
-    background: #f5f5f7;
+    width: 38px;
+    height: 38px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 4px;
+
+    padding: 0;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 10px;
+
+    background: #f2f4f7;
 
     box-shadow: none !important;
 }
 
 .custom-toggler span {
-    width: 20px;
+    display: block;
+
+    width: 18px;
+
     height: 2px;
 
     background: #111;
@@ -66,208 +125,126 @@ body {
 }
 
 
-/* Offcanvas */
+/* ==================================================
+   MOBILE OFFCANVAS
+================================================== */
 
 .mobile-menu {
-    width: 280px !important;
-    border-left: none;
+    width: 250px !important;
+
+    border: none !important;
+
+    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.09);
 }
 
 .mobile-menu .offcanvas-header {
-    padding: 20px;
+    padding: 16px;
+
     border-bottom: 1px solid #eee;
 }
 
+.mobile-menu .offcanvas-body {
+    padding: 10px;
+}
+
 .mobile-menu-img {
-    width: 44px;
-    height: 44px;
+    width: 38px;
+    height: 38px;
+
+    object-fit: cover;
 
     border-radius: 50%;
-    object-fit: cover;
+
+    border: 2px solid #0d6efd;
 }
 
 
 /* Mobile Links */
 
 .mobile-nav {
-    gap: 5px;
+    gap: 2px;
 }
 
 .mobile-nav .nav-link {
+    width: 100%;
+
     display: flex;
+
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 
-    padding: 12px 14px;
+    margin: 0;
 
-    border-radius: 12px;
+    padding: 10px 12px !important;
 
     color: #222;
 
+    font-size: 15px;
+
     font-weight: 600;
 
-    margin: 0;
+    border-radius: 9px;
+
+    transition: 0.25s ease;
 }
 
 .mobile-nav .nav-link i {
-    width: 28px;
-
-    font-size: 19px;
+    width: 24px;
 
     color: #0d6efd;
+
+    font-size: 17px;
 }
 
 .mobile-nav .nav-link:hover {
-    background: #f3f6ff;
     color: #0d6efd;
+
+    background: #f2f6ff;
 }
 
 
-/* Mobile */
+/* ==================================================
+   HERO
+================================================== */
 
-@media (max-width: 991px) {
+#home {
+    padding-top: 80px;
+}
 
-    .navbar {
-        padding: 8px 0;
-    }
+.hero-photo {
+    width: 280px;
 
-    .navbar-profile-img {
-        width: 40px;
-        height: 40px;
-    }
+    height: 280px;
 
+    object-fit: cover;
+
+    border: 7px solid #fff;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
 }
 
 
-
-/* =====================
-   Custom Mobile Toggle
-===================== */
-
-.custom-toggler {
-    width: 48px;
-    height: 48px;
-
-    border: none;
-    border-radius: 12px;
-
-    background: #f1f5f9;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    gap: 5px;
-
-    box-shadow: none !important;
-}
-
-.custom-toggler span {
-    width: 23px;
-    height: 2px;
-
-    background: #111;
-
-    border-radius: 5px;
-
-    transition: 0.3s ease;
-}
-
-
-/* Toggle Animation */
-
-.custom-toggler[aria-expanded="true"] span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
-
-.custom-toggler[aria-expanded="true"] span:nth-child(2) {
-    opacity: 0;
-}
-
-.custom-toggler[aria-expanded="true"] span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-
-/* =====================
-   Mobile Navbar
-===================== */
-
-@media (max-width: 991px) {
-
-    /* Smaller mobile menu box */
-    .navbar-collapse {
-        margin-top: 8px;
-        padding: 8px 10px;
-
-        background: #fff;
-
-        border-radius: 12px;
-
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    }
-
-
-    /* Reduce space between menu items */
-    .navbar-nav .nav-link {
-        margin: 0;
-
-        padding: 8px 12px;
-
-        font-size: 15px;
-
-        border-radius: 8px;
-    }
-
-
-    .navbar-nav .nav-link:hover {
-        background: #f5f7ff;
-    }
-
-
-    /* Remove underline animation on mobile */
-    .navbar-nav .nav-link::after {
-        display: none;
-    }
-
-
-    /* Smaller toggle button */
-    .custom-toggler {
-        width: 42px;
-        height: 42px;
-
-        border-radius: 10px;
-    }
-
-
-    .custom-toggler span {
-        width: 21px;
-    }
-
-
-    /* Smaller profile image */
-    .navbar-profile-img {
-        width: 42px;
-        height: 42px;
-    }
-
-}
-/* Typing Name */
+/* ==================================================
+   TYPING NAME
+================================================== */
 
 #typing-name {
     display: inline-block;
+
     min-height: 1.2em;
 }
 
 #typing-name::after {
     content: "|";
+
     margin-left: 3px;
+
     animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
+
     0%,
     50% {
         opacity: 1;
@@ -280,60 +257,36 @@ body {
 }
 
 
-/* Mobile Responsive Typing */
+/* ==================================================
+   ABOUT
+================================================== */
 
-@media (max-width: 768px) {
+.about-main-icon {
+    color: #0d6efd;
 
-    #home {
-        text-align: center;
-        padding-top: 90px;
-    }
-
-    #home h1 {
-        font-size: 42px;
-        line-height: 1.15;
-        min-height: 100px;
-    }
-
-    #typing-name {
-        display: inline-block;
-        word-break: break-word;
-    }
-
-    #home h2 {
-        font-size: 21px;
-    }
-
-    #home .lead {
-        font-size: 16px;
-        line-height: 1.7;
-    }
-
+    font-size: 135px;
 }
 
 
-/* Very Small Mobile */
+/* ==================================================
+   GOALS
+================================================== */
 
-@media (max-width: 480px) {
+.goal-main-icon {
+    color: #0d6efd;
 
-    #home h1 {
-        font-size: 34px;
-        min-height: 85px;
-    }
-
-    #home h2 {
-        font-size: 18px;
-    }
-
+    font-size: 115px;
 }
-/* =========================
+
+
+/* ==================================================
    SKILLS
-========================= */
+================================================== */
 
 .skill-box {
     height: 100%;
 
-    padding: 28px 20px;
+    padding: 25px 15px;
 
     text-align: center;
 
@@ -343,107 +296,83 @@ body {
 
     border-radius: 18px;
 
-    position: relative;
-
     overflow: hidden;
 
-    transition: all 0.35s ease;
+    transition: 0.35s ease;
 }
 
-
-/* Hover Animation */
-
 .skill-box:hover {
-    transform: translateY(-10px) scale(1.03);
+    transform: translateY(-8px);
 
     border-color: #0d6efd;
 
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
 }
 
 
-/* Skill Logo */
+/* Logo */
 
 .skill-logo {
     display: inline-block;
 
-    font-size: 48px;
+    font-size: 43px;
 
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 
-    transition: 0.4s ease;
+    transition: 0.35s ease;
 }
-
-
-/* Logo animation */
 
 .skill-box:hover .skill-logo {
-    transform: scale(1.15) rotate(6deg);
+    transform: scale(1.12) rotate(5deg);
 }
-
-
-/* Heading */
 
 .skill-box h5 {
+    font-size: 17px;
+
     font-weight: 700;
 
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
-
-
-/* Small label */
 
 .skill-box span {
-    font-size: 13px;
-
     color: #6c757d;
+
+    font-size: 13px;
 }
 
 
-
-/* =========================
+/* ==================================================
    AI TOOLS
-========================= */
+================================================== */
 
 .ai-tool-card {
     height: 100%;
 
-    padding: 35px 25px;
-
-    background: #fff;
+    padding: 30px 20px;
 
     text-align: center;
 
-    border-radius: 20px;
+    background: #fff;
 
     border: 1px solid #e9ecef;
 
-    transition: all 0.35s ease;
+    border-radius: 20px;
+
+    transition: 0.35s ease;
 }
-
-
-/* AI card hover */
 
 .ai-tool-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
 }
 
-
-/* AI Icon */
-
 .ai-icon {
-    width: 75px;
-    height: 75px;
+    width: 65px;
 
-    margin: 0 auto 20px;
+    height: 65px;
 
-    border-radius: 50%;
-
-    background: #eef4ff;
-
-    color: #0d6efd;
+    margin: 0 auto 18px;
 
     display: flex;
 
@@ -451,25 +380,28 @@ body {
 
     justify-content: center;
 
-    font-size: 32px;
+    color: #0d6efd;
 
-    transition: 0.4s ease;
+    background: #edf4ff;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+
+    transition: 0.35s ease;
 }
 
-
 .ai-tool-card:hover .ai-icon {
-    transform: rotate(10deg) scale(1.1);
+    color: #fff;
 
     background: #0d6efd;
 
-    color: #fff;
+    transform: scale(1.08);
 }
-
 
 .ai-tool-card h4 {
     font-weight: 700;
 }
-
 
 .ai-tool-card p {
     color: #6c757d;
@@ -478,27 +410,696 @@ body {
 }
 
 
+/* ==================================================
+   PROJECTS
+================================================== */
 
-/* =========================
-   MOBILE
-========================= */
+.project-card {
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.10) !important;
+}
+
+.project-icon {
+    height: 170px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.project-icon i {
+    color: #fff;
+
+    font-size: 65px;
+}
+
+
+/* ==================================================
+   NEW CONTACT DESIGN
+================================================== */
+
+.contact-form-card,
+.contact-details-card {
+    height: 100%;
+
+    padding: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9ecef;
+
+    border-radius: 20px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+
+/* FORM */
+
+.contact-form-card .form-control {
+    min-height: 52px;
+
+    border: 1px solid #dee2e6;
+
+    border-radius: 12px;
+
+    background: #f8f9fa;
+
+    font-size: 15px;
+
+    transition: 0.25s ease;
+}
+
+.contact-form-card textarea.form-control {
+    min-height: 150px;
+}
+
+.contact-form-card .form-control:focus {
+    background: #ffffff;
+
+    border-color: #0d6efd;
+
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.08);
+}
+
+.contact-submit-btn {
+    border-radius: 12px;
+
+    font-weight: 600;
+}
+
+
+/* RIGHT CARD */
+
+.contact-details-card {
+    background: #f8f9fc;
+}
+
+
+/* Contact detail row */
+
+.contact-detail-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px;
+
+    margin-bottom: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9ecef;
+
+    border-radius: 14px;
+
+    transition: 0.3s ease;
+}
+
+.contact-detail-item:hover {
+    transform: translateX(5px);
+
+    border-color: #cfe2ff;
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Icon */
+
+.contact-detail-icon {
+    width: 46px;
+    height: 46px;
+
+    min-width: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eaf2ff;
+
+    color: #0d6efd;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+.contact-detail-item small {
+    display: block;
+
+    color: #6c757d;
+
+    margin-bottom: 2px;
+}
+
+.contact-detail-item h6 {
+    color: #212529;
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+/* Social Section */
+
+.contact-social-section {
+    margin-top: 28px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid #dee2e6;
+}
+
+.contact-social-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Big Social Buttons */
+
+.contact-social-icons a {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #0d6efd;
+
+    border: 1px solid #dbe7ff;
+
+    border-radius: 14px;
+
+    font-size: 23px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.contact-social-icons a:hover {
+    background: #0d6efd;
+
+    color: #ffffff;
+
+    border-color: #0d6efd;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.18);
+}
+
+
+/* ==================================================
+   CONTACT MOBILE
+================================================== */
+
+@media (max-width: 991px) {
+
+    .contact-form-card,
+    .contact-details-card {
+        padding: 26px;
+    }
+
+}
+
 
 @media (max-width: 576px) {
 
+    .contact-form-card,
+    .contact-details-card {
+        padding: 22px 18px;
+
+        border-radius: 16px;
+    }
+
+
+    /* Form should stay left aligned */
+
+    .contact-form-card {
+        text-align: left;
+    }
+
+
+    /* Contact info centered */
+
+    .contact-details-card {
+        text-align: center;
+    }
+
+
+    .contact-detail-item {
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 8px;
+    }
+
+
+    .contact-detail-item:hover {
+        transform: translateY(-3px);
+    }
+
+
+    .contact-detail-icon {
+        margin: 0 auto;
+    }
+
+
+    .contact-social-icons {
+        justify-content: center;
+    }
+
+
+    .contact-social-icons a {
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 21px;
+    }
+
+}
+
+/* ==================================================
+   MOBILE CONTACT
+================================================== */
+
+@media (max-width: 991px) {
+
+    .contact-info-card {
+        padding: 28px;
+
+        text-align: center;
+    }
+
+
+    .contact-info-item {
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 10px;
+    }
+
+
+    .contact-info-icon {
+        margin: 0 auto;
+    }
+
+
+    .contact-big-socials {
+        justify-content: center;
+    }
+
+}
+
+
+/* Small Mobile */
+
+@media (max-width: 576px) {
+
+    .contact-info-card {
+        padding: 24px 18px;
+    }
+
+
+    .contact-info-icon {
+        width: 46px;
+
+        height: 46px;
+
+        min-width: 46px;
+
+        font-size: 19px;
+    }
+
+
+    .big-social-btn {
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 22px;
+    }
+
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer-social {
+    color: #fff;
+
+    font-size: 22px;
+
+    margin-left: 14px;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.footer-social:hover {
+    color: #0d6efd;
+}
+
+
+/* ==================================================
+   FLOATING CONTACT
+================================================== */
+
+.floating-contact {
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    z-index: 1040;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    color: #fff;
+
+    background: #0d6efd;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    box-shadow: 0 10px 30px rgba(13, 110, 253, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.floating-contact i {
+    font-size: 19px;
+}
+
+.floating-contact:hover {
+    color: #fff;
+
+    background: #0b5ed7;
+
+    transform: translateY(-4px);
+}
+
+
+/* ==================================================
+   TABLET / MOBILE
+================================================== */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        height: 56px;
+    }
+
+    .navbar-profile-img {
+        width: 35px;
+
+        height: 35px;
+    }
+
+    .custom-toggler {
+        width: 35px;
+
+        height: 35px;
+    }
+
+    #home {
+        padding-top: 85px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 767px) {
+
+    /* Center Sections */
+
+    #home,
+    #about,
+    #goals,
+    #skills,
+    #ai-tools,
+    #projects,
+    #contact {
+        text-align: center;
+    }
+
+
+    /* Hero */
+
+    #home h1 {
+        font-size: 40px;
+
+        line-height: 1.15;
+
+        min-height: 90px;
+    }
+
+    #home h2 {
+        font-size: 20px;
+    }
+
+    #home .lead {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-photo {
+        width: 180px;
+
+        height: 180px;
+    }
+
+
+    /* About */
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-main-icon {
+        font-size: 80px;
+    }
+
+
+    /* Goals */
+
+    .goal-content {
+        text-align: center;
+    }
+
+    .goal-main-icon {
+        font-size: 70px;
+    }
+
+
+    /* Skills */
+
     .skill-box {
-        padding: 22px 10px;
+        padding: 18px 8px;
     }
 
     .skill-logo {
-        font-size: 38px;
+        font-size: 31px;
+
+        margin-bottom: 10px;
     }
 
     .skill-box h5 {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .skill-box span {
         font-size: 11px;
     }
+
+
+    /* AI */
+
+    .ai-tool-card {
+        padding: 22px 15px;
+    }
+
+    .ai-icon {
+        width: 54px;
+
+        height: 54px;
+
+        font-size: 22px;
+    }
+
+
+    /* Projects */
+
+    .project-icon {
+        height: 130px;
+    }
+
+    .project-icon i {
+        font-size: 48px;
+    }
+
+
+    /* Contact Form */
+
+    #contact form {
+        text-align: left;
+    }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 576px) {
+
+    .container {
+        padding-left: 18px;
+
+        padding-right: 18px;
+    }
+
+    #home h1 {
+        font-size: 34px;
+
+        min-height: 80px;
+    }
+
+    #home h2 {
+        font-size: 18px;
+    }
+
+    .hero-photo {
+        width: 155px;
+
+        height: 155px;
+    }
+
+    .display-6 {
+        font-size: 28px;
+    }
+
+
+    /* Floating button only icon */
+
+.floating-instagram {
+    position: fixed;
+
+    right: 18px;
+    bottom: 18px;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    font-size: 24px;
+
+    text-decoration: none;
+
+    background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    );
+
+    box-shadow: 0 10px 30px rgba(214, 41, 118, 0.35);
+
+    z-index: 1040;
+
+    transition: 0.3s ease;
+}
+
+.floating-instagram:hover {
+    color: #fff;
+
+    transform: translateY(-4px) scale(1.05);
+}
+
+@media (max-width: 576px) {
+
+    .floating-instagram {
+        width: 48px;
+        height: 48px;
+
+        right: 14px;
+        bottom: 14px;
+
+        font-size: 21px;
+    }
+
+}
 
 }
