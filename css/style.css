@@ -1103,3 +1103,171 @@ section {
 }
 
 }
+/* ==================================================
+   FOOTER
+================================================== */
+
+.portfolio-footer {
+    background: #111827;
+
+    color: #fff;
+
+    padding: 45px 0 25px;
+}
+
+.footer-name {
+    margin-bottom: 5px;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+.footer-text {
+    margin-bottom: 0;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+}
+
+
+/* Social Icons */
+
+.footer-socials {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+}
+
+.footer-socials a {
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #fff;
+
+    font-size: 19px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background: #0d6efd;
+
+    color: #fff;
+
+    transform: translateY(-4px);
+}
+
+
+/* Divider */
+
+.footer-divider {
+    height: 1px;
+
+    margin: 30px 0 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Bottom */
+
+.footer-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+.footer-bottom a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    color: #fff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.footer-bottom a:hover {
+    color: #0d6efd;
+}
+
+
+/* ==================================================
+   MOBILE FOOTER
+================================================== */
+
+@media (max-width: 991px) {
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .portfolio-footer {
+        padding: 35px 0 20px;
+    }
+
+    .footer-name {
+        font-size: 19px;
+    }
+
+    .footer-socials a {
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 10px;
+    }
+
+}
